@@ -7,6 +7,7 @@ class UserService {
     }
     
     static async getUser (code) {
+        
         let result = await typeorm.connection
         .getRepository(usermodel)
         .createQueryBuilder("my_db")
@@ -22,6 +23,7 @@ class UserService {
     }
 
     static async insertUser (code) {
+        
         let result =  await typeorm.connection
         .createQueryBuilder()
         .insert()
@@ -40,6 +42,7 @@ class UserService {
     }
 
     static async modifyUserName (code) {
+        
         let result =  await typeorm.connection
         .createQueryBuilder()
         .update(usermodel)
@@ -55,6 +58,7 @@ class UserService {
     }
 
     static async modifyUserEmail (code) {
+
         let result =  await typeorm.connection
         .createQueryBuilder()
         .update(usermodel)
@@ -70,6 +74,7 @@ class UserService {
     }
 
     static async modifyUserCountry (code) {
+
         let result =  await typeorm.connection
         .createQueryBuilder()
         .update(usermodel)
@@ -85,6 +90,7 @@ class UserService {
     }
 
     static async modifyUserAge (code) {
+        
         let result =  await typeorm.connection
         .createQueryBuilder()
         .update(usermodel)
@@ -100,6 +106,7 @@ class UserService {
     }
 
     static async deleteUser (code) {
+        
         let result =  await typeorm.connection
         .createQueryBuilder()
         .delete()
