@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const UserService = require("../services/userservice");
 
-// postman code example http://localhost:3034/modify?id=4
 router.get("/getUser",( async (req,res) => {
     try {
         let result = await UserService.getUser(req.query.id);        
@@ -56,7 +55,6 @@ router.put("/updateUserAge", ( async (req,res) => {
     }
 }));
 
-// postman code example http://localhost:3034/deleteUser?id=4
 router.delete("/deleteUser", ( async (req,res) => {
     try {
         let result = await UserService.deleteUser(req.query.id); 
