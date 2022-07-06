@@ -14,10 +14,8 @@ class UserService {
         .getOne();
         console.log(result);
 
-        if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+        if (!result) {           
+            throw new Error('Error get User');
         }
 
         return result;
@@ -34,10 +32,8 @@ class UserService {
         ])
         .execute();
     
-        if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+        if (!result) {            
+            throw new Error('Error insert user');
         }
         
         return result;
@@ -52,9 +48,7 @@ class UserService {
         .execute();
     
         if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+            throw new Error('Error change user name');
         }
         
         return result;
@@ -69,9 +63,7 @@ class UserService {
         .execute();
     
         if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+            throw new Error('change user email');
         }
         
         return result;
@@ -86,9 +78,7 @@ class UserService {
         .execute();
     
         if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+            throw new Error('change user country');
         }
         
         return result;
@@ -103,9 +93,7 @@ class UserService {
         .execute();
     
         if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+            throw new Error('Error change user age');
         }
         
         return result;
@@ -120,9 +108,7 @@ class UserService {
         .execute();
     
         if (!result) {
-            errors.codeDoesNotExist.attributes[0] = code;
-            
-            throw new Error(errors.codeDoesNotExist.message, { cause: errors.codeDoesNotExist });
+            throw new Error('Error delete user');
         }
         
         return result;
